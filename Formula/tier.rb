@@ -11,7 +11,7 @@ class Tier < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/tierrun/tier/releases/download/v0.3.6/tier_0.3.6_macOS_arm64.tar.gz"
-      sha256 "f6c1764d0f61ca9cf2f18a30920695e144b6e62c2e49429144975dfd6285251e"
+      sha256 "6128e213d96a87ebb9acdfb7a161dc814f04617b3d4784e901530108d66e2b60"
 
       def install
         bin.install "tier"
@@ -19,7 +19,7 @@ class Tier < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/tierrun/tier/releases/download/v0.3.6/tier_0.3.6_macOS_amd64.tar.gz"
-      sha256 "22f3196ad441514dba290df5f5133e338d498bfac4afcf9957040deb28b94e5a"
+      sha256 "0905870496f82e5c72088af5527fddc04c2b5cb77ef173b5ee251600175afe44"
 
       def install
         bin.install "tier"
@@ -30,7 +30,7 @@ class Tier < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/tierrun/tier/releases/download/v0.3.6/tier_0.3.6_linux_arm64.tar.gz"
-      sha256 "b5bcbb132c8ae6796f81115377549d1b8bc1fbcf12e80f98809877a4a5cebb8a"
+      sha256 "8769d8f57012ef7e0a1bc91cd8df5451b645072f4f81a2295cd00c79edc9507d"
 
       def install
         bin.install "tier"
@@ -38,7 +38,7 @@ class Tier < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/tierrun/tier/releases/download/v0.3.6/tier_0.3.6_linux_amd64.tar.gz"
-      sha256 "5138aece22305260fbb20498faf46d381fcb10f861388b198635e8d42346768e"
+      sha256 "fdd4a5ef5bb5713da7037c5c527350ed927390b431a6c2003bd1ff54b02f9785"
 
       def install
         bin.install "tier"
@@ -47,6 +47,6 @@ class Tier < Formula
   end
 
   test do
-    system "#{bin}/tier --version"
+    system "#{bin}/tier version"
   end
 end
