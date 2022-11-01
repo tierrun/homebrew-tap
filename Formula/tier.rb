@@ -5,21 +5,21 @@
 class Tier < Formula
   desc "The Tier CLI"
   homepage "https://tier.run/"
-  version "0.3.8"
+  version "0.3.9"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tierrun/tier/releases/download/v0.3.8/tier_0.3.8_macOS_arm64.tar.gz"
-      sha256 "88863ff2cb1b4e3562a68c547b222da47a7d67c378df1ee21ba5aa6f12d1f1fd"
+      url "https://github.com/tierrun/tier/releases/download/v0.3.9/tier_0.3.9_macOS_arm64.tar.gz"
+      sha256 "abce600edc049be8f888d85d46d8b447d58c5d41a3dfd7a24564aabea7f72938"
 
       def install
         bin.install "tier"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.3.8/tier_0.3.8_macOS_amd64.tar.gz"
-      sha256 "919c308ca85662b5b7f8b451d3d9988ff0d31824db8282e8af31d5594926e687"
+      url "https://github.com/tierrun/tier/releases/download/v0.3.9/tier_0.3.9_macOS_amd64.tar.gz"
+      sha256 "6d2fbe757b9bb6b76104d569a0629c1f76127d4526929bbff13a42cd72e03214"
 
       def install
         bin.install "tier"
@@ -29,16 +29,16 @@ class Tier < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tierrun/tier/releases/download/v0.3.8/tier_0.3.8_linux_arm64.tar.gz"
-      sha256 "e9ad4c56089e46ad3e7fe8293dbac45cb71e1ca22cc27f6b155d31804134a72b"
+      url "https://github.com/tierrun/tier/releases/download/v0.3.9/tier_0.3.9_linux_arm64.tar.gz"
+      sha256 "db86d4d1b5363d24a181b4efa05a30250ce72461274ce0113cbf1156d71be7c3"
 
       def install
         bin.install "tier"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.3.8/tier_0.3.8_linux_amd64.tar.gz"
-      sha256 "3a070feaba1a04bfd3ec68fa3c41fe1f3027149c3450c4d58143a4f459d78767"
+      url "https://github.com/tierrun/tier/releases/download/v0.3.9/tier_0.3.9_linux_amd64.tar.gz"
+      sha256 "5e91a9a3295d18468c37475647bd32b5a5583762041ee25760a7441192f60353"
 
       def install
         bin.install "tier"
@@ -47,6 +47,6 @@ class Tier < Formula
   end
 
   test do
-    system "#{bin}/tier version"
+    system "#{bin}/tier version --homebrew"
   end
 end
