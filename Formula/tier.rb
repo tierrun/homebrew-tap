@@ -5,21 +5,21 @@
 class Tier < Formula
   desc "The Tier CLI"
   homepage "https://tier.run/"
-  version "0.4.2"
+  version "0.4.3"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tierrun/tier/releases/download/v0.4.2/tier_0.4.2_macOS_arm64.tar.gz"
-      sha256 "3baf3f9c84a1e823e180ea52616427064708a7694ac1e9f2149c8be68e3118f8"
+      url "https://github.com/tierrun/tier/releases/download/v0.4.3/tier_0.4.3_macOS_arm64.tar.gz"
+      sha256 "30bc4ee99a25f0db96c9d086c02fcb5488e08afd8e949d516045aef1fc7b6fcb"
 
       def install
         bin.install "tier"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.4.2/tier_0.4.2_macOS_amd64.tar.gz"
-      sha256 "284e75e9d3b09774270b244a38488f57ff476c635868a6126adea267c29eab9c"
+      url "https://github.com/tierrun/tier/releases/download/v0.4.3/tier_0.4.3_macOS_amd64.tar.gz"
+      sha256 "7a65df5e1c0bfbb636aae6ec756f138672b613462d7eedfb19454ab6cd08b224"
 
       def install
         bin.install "tier"
@@ -29,16 +29,16 @@ class Tier < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tierrun/tier/releases/download/v0.4.2/tier_0.4.2_linux_arm64.tar.gz"
-      sha256 "21062132bbf97973605d2e72599a1f4cb6a3c70d9be5ae9602ed244f2e94b534"
+      url "https://github.com/tierrun/tier/releases/download/v0.4.3/tier_0.4.3_linux_arm64.tar.gz"
+      sha256 "1863e40d5f35be89c36f460c245698830a210202af145ba93bf940978a0b2302"
 
       def install
         bin.install "tier"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.4.2/tier_0.4.2_linux_amd64.tar.gz"
-      sha256 "dc8ea7cf111f81a189ba0a958a63b68c88ed31c1f12747d51979de4dfe6c0d76"
+      url "https://github.com/tierrun/tier/releases/download/v0.4.3/tier_0.4.3_linux_amd64.tar.gz"
+      sha256 "658f1228f9a3bc05c63974405c266f1e0dc34bcb7041dfbb594921c0cd88fa65"
 
       def install
         bin.install "tier"
