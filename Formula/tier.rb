@@ -5,21 +5,21 @@
 class Tier < Formula
   desc "The Tier CLI"
   homepage "https://tier.run/"
-  version "0.5.1"
+  version "0.5.2"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tierrun/tier/releases/download/v0.5.1/tier_0.5.1_macOS_arm64.tar.gz"
-      sha256 "40bdd0a8211a317b02c88e8f07eff7d04b6e28807722d5460f6961882d85e1df"
+      url "https://github.com/tierrun/tier/releases/download/v0.5.2/tier_0.5.2_macOS_arm64.tar.gz"
+      sha256 "2a53eef5a6cd50ce3e1d9cb7d22d3ebd06babd1daf0c608c337dca74c095840b"
 
       def install
         bin.install "tier"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.5.1/tier_0.5.1_macOS_amd64.tar.gz"
-      sha256 "6e13c73701cff9f4ceb4cd5bc37783edfdca1281445561755eed5240e8ceaee6"
+      url "https://github.com/tierrun/tier/releases/download/v0.5.2/tier_0.5.2_macOS_amd64.tar.gz"
+      sha256 "708e74110ab5a4ccf24818529132da1faef0a3477b087638cf79756d1ce41bc2"
 
       def install
         bin.install "tier"
@@ -28,17 +28,17 @@ class Tier < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tierrun/tier/releases/download/v0.5.1/tier_0.5.1_linux_arm64.tar.gz"
-      sha256 "76e3824a5915b1c59f486a47124112fa68ca1252d3ffc5ba34661f33f9036abd"
+    if Hardware::CPU.intel?
+      url "https://github.com/tierrun/tier/releases/download/v0.5.2/tier_0.5.2_linux_amd64.tar.gz"
+      sha256 "3a50011490139efa6a4919fa51f6ad3ecf7025771ddf9b64a4a0856a946d2e3d"
 
       def install
         bin.install "tier"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.5.1/tier_0.5.1_linux_amd64.tar.gz"
-      sha256 "94e772bad6e426d3711e0a862998331ec3eb4d27875b2aa6052f757c3d2cc8ba"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tierrun/tier/releases/download/v0.5.2/tier_0.5.2_linux_arm64.tar.gz"
+      sha256 "e12c1ce2a37952990c6ae1892a9474a34b837f99549c550a21a68dfb2c8f512a"
 
       def install
         bin.install "tier"
