@@ -5,21 +5,21 @@
 class Tier < Formula
   desc "The Tier CLI"
   homepage "https://tier.run/"
-  version "0.6.2"
+  version "0.7.0"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tierrun/tier/releases/download/v0.6.2/tier_0.6.2_macOS_arm64.tar.gz"
-      sha256 "97a520a2388e7b86da0d0bf5548965d1a5a5a5952dabcc2799b633d20cae3ce3"
+      url "https://github.com/tierrun/tier/releases/download/v0.7.0/tier_0.7.0_darwin_arm64.tar.gz"
+      sha256 "0614a8478781da0cf3b32a8055738d8cee67d58f227d9bbd24522ea34c52125c"
 
       def install
         bin.install "tier"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.6.2/tier_0.6.2_macOS_amd64.tar.gz"
-      sha256 "b51fb3a25116bc1d6a059e09eca206e7d03a3f7e439c8b9e16779e7d529fd5f9"
+      url "https://github.com/tierrun/tier/releases/download/v0.7.0/tier_0.7.0_darwin_amd64.tar.gz"
+      sha256 "a0c8880939d4993c958f4d3f5b2733c847a252c46fa848d8817c255fe6b7d2a0"
 
       def install
         bin.install "tier"
@@ -29,16 +29,16 @@ class Tier < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tierrun/tier/releases/download/v0.6.2/tier_0.6.2_linux_arm64.tar.gz"
-      sha256 "f8c57fd5a2f896dbcfecdd1015eaae464bdea322e243ee9e4acf753da1e46280"
+      url "https://github.com/tierrun/tier/releases/download/v0.7.0/tier_0.7.0_linux_arm64.tar.gz"
+      sha256 "a9c98d133284726954d55581bc0140202aa36d54d00b47d681b2855df807490c"
 
       def install
         bin.install "tier"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.6.2/tier_0.6.2_linux_amd64.tar.gz"
-      sha256 "25b2fdd0de2a29eee22a6f407f45d8fb2f00965c8861450b53baf4924d7ee13b"
+      url "https://github.com/tierrun/tier/releases/download/v0.7.0/tier_0.7.0_linux_amd64.tar.gz"
+      sha256 "9a563594f62e0df17907095d5054126ccc6049b101f96a8de976a5a675956a06"
 
       def install
         bin.install "tier"
