@@ -5,21 +5,21 @@
 class Tier < Formula
   desc "The Tier CLI"
   homepage "https://tier.run/"
-  version "0.7.0"
+  version "0.7.1"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tierrun/tier/releases/download/v0.7.0/tier_0.7.0_darwin_arm64.tar.gz"
-      sha256 "0614a8478781da0cf3b32a8055738d8cee67d58f227d9bbd24522ea34c52125c"
+      url "https://github.com/tierrun/tier/releases/download/v0.7.1/tier_0.7.1_darwin_arm64.tar.gz"
+      sha256 "4515be0aeb6991889593281b80120003c189e257212818ec012f5588d01c007c"
 
       def install
         bin.install "tier"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.7.0/tier_0.7.0_darwin_amd64.tar.gz"
-      sha256 "a0c8880939d4993c958f4d3f5b2733c847a252c46fa848d8817c255fe6b7d2a0"
+      url "https://github.com/tierrun/tier/releases/download/v0.7.1/tier_0.7.1_darwin_amd64.tar.gz"
+      sha256 "f6581ea586b7747c1e029768f5557847be208eb5caf58c4e060ce5d2c4858348"
 
       def install
         bin.install "tier"
@@ -29,16 +29,16 @@ class Tier < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tierrun/tier/releases/download/v0.7.0/tier_0.7.0_linux_arm64.tar.gz"
-      sha256 "a9c98d133284726954d55581bc0140202aa36d54d00b47d681b2855df807490c"
+      url "https://github.com/tierrun/tier/releases/download/v0.7.1/tier_0.7.1_linux_arm64.tar.gz"
+      sha256 "3904e19d21608c4b5bdf3e00c8183dffde94d6fef1d168a4be0552f5c03b40d6"
 
       def install
         bin.install "tier"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.7.0/tier_0.7.0_linux_amd64.tar.gz"
-      sha256 "9a563594f62e0df17907095d5054126ccc6049b101f96a8de976a5a675956a06"
+      url "https://github.com/tierrun/tier/releases/download/v0.7.1/tier_0.7.1_linux_amd64.tar.gz"
+      sha256 "756fd196dc91dee9b4c7ff208a7f443d38422cc13db1733257fbafa53751cbae"
 
       def install
         bin.install "tier"
