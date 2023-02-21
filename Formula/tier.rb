@@ -9,17 +9,17 @@ class Tier < Formula
   license "BSD-3-Clause"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/tierrun/tier/releases/download/v0.9.0/tier_0.9.0_darwin_arm64.tar.gz"
-      sha256 "e0eb6a41385222d450cef39fafe85a10a946624f71562c7cba74d9a3a4f41215"
+    if Hardware::CPU.intel?
+      url "https://github.com/tierrun/tier/releases/download/v0.9.0/tier_0.9.0_darwin_amd64.tar.gz"
+      sha256 "be4d81f422513046daa775cc312a241dfb4fc3894fc2f7ea57890f63780b2ccb"
 
       def install
         bin.install "tier"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.9.0/tier_0.9.0_darwin_amd64.tar.gz"
-      sha256 "28d30de9c6c3cf792b58f52d1edcbab5c396d82ae03a8c92a9912afd7ed6e80a"
+    if Hardware::CPU.arm?
+      url "https://github.com/tierrun/tier/releases/download/v0.9.0/tier_0.9.0_darwin_arm64.tar.gz"
+      sha256 "d5753e074a73bf38eba9377a32de89c38563722de7da84be5e760be580d113a6"
 
       def install
         bin.install "tier"
@@ -30,7 +30,7 @@ class Tier < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/tierrun/tier/releases/download/v0.9.0/tier_0.9.0_linux_arm64.tar.gz"
-      sha256 "8afe774608e3d94680682526ac182a4db7cc91472fb69d1e9c0024f220154355"
+      sha256 "1dfd9a98538320c555ecd759a009c40fc84f49a64960a065c227e5bcae857cbc"
 
       def install
         bin.install "tier"
@@ -38,7 +38,7 @@ class Tier < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/tierrun/tier/releases/download/v0.9.0/tier_0.9.0_linux_amd64.tar.gz"
-      sha256 "e61c376352faa26478e32995ab4aa5bcfdeebde956b0a1d7a69c0770e3d70908"
+      sha256 "b4b21c60be6344241e90b6091d92aafbefb8298f1f471b5b91bf3308d4186965"
 
       def install
         bin.install "tier"
