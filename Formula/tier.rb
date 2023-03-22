@@ -5,21 +5,21 @@
 class Tier < Formula
   desc "The Tier CLI"
   homepage "https://tier.run/"
-  version "0.9.0"
+  version "0.10.0"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.9.0/tier_0.9.0_darwin_amd64.tar.gz"
-      sha256 "be4d81f422513046daa775cc312a241dfb4fc3894fc2f7ea57890f63780b2ccb"
+      url "https://github.com/tierrun/tier/releases/download/v0.10.0/tier_0.10.0_darwin_amd64.tar.gz"
+      sha256 "5130381a9347150fcc7e58ca389f7cde7849bb091077d251d38ec3db274943f5"
 
       def install
         bin.install "tier"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tierrun/tier/releases/download/v0.9.0/tier_0.9.0_darwin_arm64.tar.gz"
-      sha256 "d5753e074a73bf38eba9377a32de89c38563722de7da84be5e760be580d113a6"
+      url "https://github.com/tierrun/tier/releases/download/v0.10.0/tier_0.10.0_darwin_arm64.tar.gz"
+      sha256 "f18551beafcbed88a047a73683596d8196b73dd48891a1c2844aa9b49f8bd357"
 
       def install
         bin.install "tier"
@@ -29,16 +29,16 @@ class Tier < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tierrun/tier/releases/download/v0.9.0/tier_0.9.0_linux_arm64.tar.gz"
-      sha256 "1dfd9a98538320c555ecd759a009c40fc84f49a64960a065c227e5bcae857cbc"
+      url "https://github.com/tierrun/tier/releases/download/v0.10.0/tier_0.10.0_linux_arm64.tar.gz"
+      sha256 "aedb77367504596723bbc4fd5879f52cd4a6a405c68bf70da4a9d483a9ba4d76"
 
       def install
         bin.install "tier"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.9.0/tier_0.9.0_linux_amd64.tar.gz"
-      sha256 "b4b21c60be6344241e90b6091d92aafbefb8298f1f471b5b91bf3308d4186965"
+      url "https://github.com/tierrun/tier/releases/download/v0.10.0/tier_0.10.0_linux_amd64.tar.gz"
+      sha256 "bc7f3e28263d9192182581ae111c9cec3a9ee3d9106fddcee0730009d0af96e4"
 
       def install
         bin.install "tier"
