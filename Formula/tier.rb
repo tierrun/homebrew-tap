@@ -5,21 +5,21 @@
 class Tier < Formula
   desc "The Tier CLI"
   homepage "https://tier.run/"
-  version "0.11.0"
+  version "0.11.1"
   license "BSD-3-Clause"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/tierrun/tier/releases/download/v0.11.0/tier_0.11.0_darwin_arm64.tar.gz"
-      sha256 "96e8840a5d2fd2307957e677f2d4f88e0fb31dfd90ea5c513194205575a6c773"
+    if Hardware::CPU.intel?
+      url "https://github.com/tierrun/tier/releases/download/v0.11.1/tier_0.11.1_darwin_amd64.tar.gz"
+      sha256 "1d6fead07cc82d1c26be0484f70ded717dd956e21defb74c7f7064d64090b452"
 
       def install
         bin.install "tier"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.11.0/tier_0.11.0_darwin_amd64.tar.gz"
-      sha256 "8d6f38a2f2eb0ba38eb7311f9b118db8efab94748dbc7ac2d08d6a94211d1904"
+    if Hardware::CPU.arm?
+      url "https://github.com/tierrun/tier/releases/download/v0.11.1/tier_0.11.1_darwin_arm64.tar.gz"
+      sha256 "ca704858269e0b4656419dc7dc0e1c94e155a3cda3f62791eb3f0823c80f68ac"
 
       def install
         bin.install "tier"
@@ -28,17 +28,17 @@ class Tier < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/tierrun/tier/releases/download/v0.11.0/tier_0.11.0_linux_amd64.tar.gz"
-      sha256 "717efe3e3c7924ec00d5d72000c3be314f42279c2820a658615f27c9f61791ab"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tierrun/tier/releases/download/v0.11.1/tier_0.11.1_linux_arm64.tar.gz"
+      sha256 "42c1c78743235c488cbe4ba026e29cdfbad26d9957cdf44bcc6a00d715babb35"
 
       def install
         bin.install "tier"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tierrun/tier/releases/download/v0.11.0/tier_0.11.0_linux_arm64.tar.gz"
-      sha256 "fbeb0299124f9cb4fe0b3e66a5cc8ac1760ac8d1af6ee3cd886fc5d34f0600d1"
+    if Hardware::CPU.intel?
+      url "https://github.com/tierrun/tier/releases/download/v0.11.1/tier_0.11.1_linux_amd64.tar.gz"
+      sha256 "0e08a06dcd9e8af7a07405e3cd790e07ab7d047f3e4b9861eb2b757c8bc5f58c"
 
       def install
         bin.install "tier"
